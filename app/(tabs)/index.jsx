@@ -48,17 +48,18 @@ const StorageExample = () => {
 
   return (
     <View style={{ padding: 20 }}>
-      <Text>Ingresa un dato:</Text>
+      <Text style={{fontSize: 20, marginBottom: 5,}}>Ingresa un dato:</Text>
       <TextInput
         value={data}
+        placeholder="Ingresa un dato"
         onChangeText={setData}
-        style={{ borderWidth: 1, marginVertical: 10, padding: 5 }}
+        style={{ borderWidth: 1, borderColor: '#ccc', borderRadius: 5, padding: 10, width: '100%', marginBottom: 20,}}
       />
       <Button title="Guardar Dato" style={{ marginVertical: 5 }} onPress={saveData} />
       <Button title="Cargar Dato" onPress={loadData} />
       <Button title="Eliminar Dato" onPress={clearData} />
-      {storedData ? <Text>Dato guardado: {storedData}</Text> : null}
-      <Text>Dato Temporal: {tempData}</Text>
+      {storedData ? <Text style={{marginTop: 20, fontSize: 16,}}>Dato guardado: {storedData}</Text> : null}
+      <Text style={{marginTop: 20, fontSize: 16,}}>Dato Temporal: {tempData}</Text>
     </View>
   );
 };
